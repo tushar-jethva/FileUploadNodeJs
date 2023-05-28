@@ -23,7 +23,7 @@ const upload = multer({storage});
 //single
 AuthRouter.post('/uploadOne',upload.single('uploadFile'),(req,res)=>{
     if(req.file != null){
-        res.json({"url":`http://${IP}:${PORT}/${arr[i]['originalname']}`});
+        res.json({"url":`http://${IP}:${PORT}/${req.file['originalname']}`});
     }
 });
 
